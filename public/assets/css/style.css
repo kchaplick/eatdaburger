@@ -1,0 +1,26 @@
+body{
+  background:orange;
+}
+
+h1{
+  font-family: 'Baloo Bhai', cursive;
+  color: white;
+}
+
+h2{
+  font-family: 'Baloo Bhai', cursive;
+  
+}
+
+ul{
+  list-style-type: none;
+}
+
+li{
+  font-family: 'Kodchasan', sans-serif;
+  
+}
+
+label{
+  font-family: 'Kodchasan', sans-serif;
+}
