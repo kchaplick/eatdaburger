@@ -2,7 +2,10 @@
 $(function() {
   $(".change-devoured").on("click", function(event) {
     var id = $(this).data("id");
-    var newDevoured = $(this).data("newdevoured");
+    var devouredState = $(this).data("newdevoured");
+
+    if(devouredState === false){
+    var newDevoured = true;
 
     var newDevouredState = {
       devoured: newDevoured
@@ -19,6 +22,17 @@ $(function() {
         location.reload();
       }
     );
+    }else if (devouredState === true){
+      $.ajax("/api/burgers/" + id, {
+        type: "DELETE"
+      }).then(
+        function() {
+          console.log("deleted burger", id);
+          // Reload the page to get the updated list
+          location.reload();
+        }
+      );
+    }
   });
 
   $(".create-form").on("submit", function(event) {
