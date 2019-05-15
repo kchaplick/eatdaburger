@@ -1,53 +1,53 @@
 <div class="container">
   <!--header and logo-->
   <div class="row">
-    <div class="col-12">
+    <div class="col-12 text-center">
       <h1>Eat Da Burger</h1>
-      <img src="../public/assets/images/burger.png">
+      <img class="burgerLogo" src="../assets/images/burger.png">
     </div>
   </div>
 
-<!--burgers -->
-<div class="row">
-  <div class="col-6">
-  <h2>Burgers To Eat</h2>
+  <!--burgers -->
+  <div class="row">
+    <div class="col-6 text-center">
+      <h2>Burgers To Eat</h2>
 
-  <ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    {{> burgers/burger-block devoured=false}}
-    {{/unless}}
-    {{/each}}
-  </ul>
-</div>
-
-<div class="col-6">
-  <h2>Burgers Eaten</h2>
-
-  <ul>
-    {{#each burgers}}
-    {{#if devoured}}
-    {{> burgers/burger-block devoured=true}}
-    {{/if}}
-    {{/each}}
-  </ul>
-</div>
-<!--end burgers-->
-  </div>
-
-<div class="row">
-  <div class="col-12">
-  <h2>Add a Burger</h2>
-  <form class="create-form">
-
-    <div class="form-group">
-      <label for="burger">Burger Name:</label>
-      <input type="text" id="name" name="name">
+      <ul>
+        {{#each burgers}}
+        {{#unless devoured}}
+        {{> burgers/burger-block devoured=false}}
+        {{/unless}}
+        {{/each}}
+      </ul>
     </div>
 
-    <button type="submit">Add Burger</button>
-  </form>
+    <div class="col-6 text-center">
+      <h2>Burgers Eaten</h2>
+
+      <ul>
+        {{#each burgers}}
+        {{#if devoured}}
+        {{> burgers/burger-block devoured=true}}
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+    <!--end burgers-->
   </div>
-</div>
+
+  <div class="row">
+    <div class="col-12 text-center">
+      <h2>Add a Burger</h2>
+      <form class="create-form">
+
+        <div class="form-group">
+          <label for="burger">Burger Name:</label>
+          <input type="text" id="name" name="name">
+        </div>
+
+        <button type="submit">Add Burger</button>
+      </form>
+    </div>
+  </div>
   <!--end of main container-->
 </div>
